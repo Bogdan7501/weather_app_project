@@ -1,0 +1,22 @@
+{% extends 'main_app/base.html' %}
+{% block title %}
+How is the weather?
+{% endblock %}
+
+{% block content %}
+<div class="card container" style="width: 28rem;">
+    <center>
+        <h1>How is the weather?</h1>
+        <img src=" http://openweathermap.org/img/wn/{{ city_weather.icon }}.png" alt="Image">
+        <h2>City：{{ city_weather.city}}</h2>
+        <h2>{{ city_weather.temperature}} °C</h2>
+        <h3>Situation：{{ city_weather.description}}</h3>
+        <h3>Country code：{{ city_weather.country_code}}</h3>
+        <h3>Coordinate：{{ city_weather.coordinate}}</h3>
+        <h3>Pressure：{{ city_weather.pressure}}</h3>
+        <h3>Humidity：{{ city_weather.humidity}}</h3>
+        <h3>Main：{{ city_weather.main}}</h3>
+    </center>
+</div>
+
+{% endblock %}
